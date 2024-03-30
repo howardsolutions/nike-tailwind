@@ -1,3 +1,4 @@
+import { Nav } from './components/';
 import {
   CustomerReviews,
   Footer,
@@ -12,7 +13,7 @@ import {
 export default function App() {
   return (
     <>
-      <nav>Navbar</nav>
+      <Nav />
       <header className='xl:padding-1 wide:padding-r padding-b'>
         <Hero />
       </header>
