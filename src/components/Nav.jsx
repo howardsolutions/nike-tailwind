@@ -1,5 +1,6 @@
 import { headerLogo } from '../assets/images';
 import { hamburger } from '../assets/icons';
+import { navLinks } from '../constants';
 
 const Nav = () => {
   return (
@@ -8,7 +9,28 @@ const Nav = () => {
         <a href='/'>
           <img alt='Nike Logo' width={130} height={30} src={headerLogo} />
         </a>
-        <ul className='flex justify-center items-center gap-16 max-lg:hidden'></ul>
+        <ul className='flex flex-1 justify-center items-center gap-16 max-lg:hidden'>
+          {navLinks.map((item) => (
+            <li key={item.label}>
+              <a
+                href={item.href}
+                alt={item.label}
+                className='font-montserrat leading-normal text-lg text-slate-gray'
+              >
+                {item.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+        <div>
+          <img
+            className='hidden max-lg:block'
+            src={hamburger}
+            alt='hamburger'
+            width={25}
+            height={25}
+          />
+        </div>
       </nav>
     </div>
   );
