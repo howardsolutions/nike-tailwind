@@ -14,9 +14,7 @@ export default function App() {
   return (
     <>
       <Nav />
-      <header className='xl:padding-1 wide:padding-r padding-b'>
-        <Hero />
-      </header>
+      <Hero />
       <main>
         <section className='padding'>
           <PopularProducts />
