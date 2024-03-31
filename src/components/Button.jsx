@@ -1,7 +1,7 @@
-const Button = ({ label, iconURL }) => {
+const Button = ({ children, iconURL }) => {
   return (
     <button className='flex justify-center items-center rounded-full text-white gap-2 px-7 py-4 border font-montserrat text-lg leading-none bg-coral-red'>
-      {label}
+      {children}
       <img
         src={iconURL}
         alt='arrow right icon'
