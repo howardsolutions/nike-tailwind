@@ -16,12 +16,10 @@ export default function App() {
       <Nav />
       <Hero />
       <main>
-        <section className='padding'>
-          <PopularProducts />
-        </section>
-        <section className='padding'>
-          <SuperQuality />
-        </section>
+        <PopularProducts />
+
+        <SuperQuality />
+
         <section className='padding'>
           <Services />
         </section>
