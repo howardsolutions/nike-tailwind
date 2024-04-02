@@ -1,6 +1,10 @@
-const Button = ({ children, iconURL }) => {
+const Button = ({ children, iconURL, classNames }) => {
   return (
-    <button className='flex justify-center items-center rounded-full text-white gap-2 px-7 py-4 border font-montserrat text-lg leading-none bg-coral-red'>
+    <button
+      className={`flex justify-center items-center rounded-full gap-2 px-7 py-4 border font-montserrat text-lg leading-none ${
+        classNames || 'text-white bg-coral-red'
+      }`}
+    >
       {children}
       {iconURL && (
         <img

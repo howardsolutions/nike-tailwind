@@ -15,6 +15,7 @@ export default function App() {
     <>
       <Nav />
       <Hero />
+
       <main>
         <PopularProducts />
 
@@ -22,9 +23,8 @@ export default function App() {
 
         <Services />
 
-        <section className='padding'>
-          <SpecialOffer />
-        </section>
+        <SpecialOffer />
+
         <section className='padding bg-pale-blue'>
           <CustomerReviews />
         </section>
@@ -32,9 +32,8 @@ export default function App() {
           <Subscribe />
         </section>
       </main>
-      <footer className='bg-black padding-x padding-t pb-8'>
-        <Footer />
-      </footer>
+
+      <Footer />
     </>
   );
 }
