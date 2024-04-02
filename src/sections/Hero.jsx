@@ -3,7 +3,10 @@ import { bigShoe1 } from '../assets/images';
 import { Button } from '../components';
 import { shoes, statistics } from '../constants';
 import ShoeCard from '../components/ShoeCard';
+import { useState } from 'react';
 function Hero() {
+  const [bigShoeImg, setBigShoeImg] = useState(bigShoe1);
+
   return (
     <header
       id='home'
@@ -42,17 +45,21 @@ function Hero() {
 
       <div className='relative flex-1 flex justify-center items-center xl:min-h-screen max-xl:py-40 bg-cover bg-primary bg-hero'>
         <img
-          src={bigShoe1}
+          src={bigShoeImg}
           alt='Shoe Collection'
           width={610}
           height={500}
           className='object-contain relative z-10'
         />
 
-        <div>
+        <div className='flex sm:gap-6 gap-4 absolute -bottom-[5%] sm:left-[10%] max-sm:px-6'>
           {shoes.map((shoe) => (
             <div key={shoe.thumbnail}>
-              <ShoeCard />
+              <ShoeCard
+                shoe={shoe}
+                changeShoeImage={(shoeImg) => setBigShoeImg(shoeImg)}
+                currentBigShoeImg={bigShoeImg}
+              />
             </div>
           ))}
         </div>
