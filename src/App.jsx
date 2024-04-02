@@ -20,9 +20,8 @@ export default function App() {
 
         <SuperQuality />
 
-        <section className='padding'>
-          <Services />
-        </section>
+        <Services />
+
         <section className='padding'>
           <SpecialOffer />
         </section>
