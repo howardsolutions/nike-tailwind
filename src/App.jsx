@@ -25,12 +25,9 @@ export default function App() {
 
         <SpecialOffer />
 
-        <section className='padding bg-pale-blue'>
-          <CustomerReviews />
-        </section>
-        <section className='padding-x sm:px-32 py-16 w-full'>
-          <Subscribe />
-        </section>
+        <CustomerReviews />
+
+        <Subscribe />
       </main>
 
       <Footer />
